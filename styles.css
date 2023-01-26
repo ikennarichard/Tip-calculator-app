@@ -92,7 +92,7 @@ main {
 
 
 
-input[type=number] {
+.no_of_people, .select_tip, .bill {
     display: block;
     text-align: right;
     padding-inline-end: 9px;
@@ -106,7 +106,16 @@ input[type=number] {
     appearance: textfield;
 }
 
-input[type="number"]:focus {
+
+.bill, .no_of_people {
+    margin-block-start: .7em;
+}
+
+.error {
+    outline: 2px solid var(--soft-red);
+}
+
+.no_error {
     outline: 2px solid var(--strong-cyan);
 }
 
@@ -151,7 +160,7 @@ input[type=button] {
 }
 
 
-input[type=button]:focus,
+
 input[type=button]:hover {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
@@ -170,10 +179,6 @@ input[type=button]:hover {
     color: var(--soft-red) ;
 }
 
-
-#bill, #no_of_people {
-    margin-block-start: .7em;
-}
 
 
 .figure_icon {
