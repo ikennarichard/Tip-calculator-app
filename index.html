@@ -9,7 +9,9 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1>SPLITTER</h1>
+    <header>
+      <h1>SPLITTER</h1>
+    </header>
     <main>
       <div class="calculator">
           <div>
@@ -22,18 +24,18 @@
             
             <div class="tip_percent">
               <label for="select_tip">Select Tip %</label>
-              <input type="button" value="5%" id="select_tip" class="select_btn">
-              <input type="button" value="10%" id="select_tip" class="select_btn">
-              <input type="button" value="15%" id="select_tip" class="select_btn">
-              <input type="button" value="25%" id="select_tip" class="select_btn">
-              <input type="button" value="50%" id="select_tip" class="select_btn">
-              <input type="number" placeholder="Custom" id="custom_tip" class="custom_tip">
+              <input type="button" value="5%"  class="select_btn">
+              <input type="button" value="10%"  class="select_btn">
+              <input type="button" value="15%"  class="select_btn">
+              <input type="button" value="25%"  class="select_btn">
+              <input type="button" value="50%"  class="select_btn">
+              <input type="number" placeholder="Custom" id="select_tip" class="custom_tip">
             </div>
     
             <!-- number of people -->
           <div class="num_people">
             <label for="no_of_people">Number of People</label>
-            <img src="./images/icon-person.svg" class="figure_icon">
+            <img src="./images/icon-person.svg" class="figure_icon" alt="person icon">
             
             <!-- error message -->
             <span aria-hidden="true" class="error_message">Can't be zero</span>

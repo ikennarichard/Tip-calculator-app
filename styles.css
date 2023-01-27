@@ -96,7 +96,7 @@ main {
 
 
 
-.no_of_people, .select_tip, .bill, .custom_tip {
+.no_of_people, .bill, .custom_tip {
     display: block;
     text-align: right;
     padding-inline-end: 9px;

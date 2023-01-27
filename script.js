@@ -1,7 +1,7 @@
 // dom elements
 const bill = document.querySelector("#bill");
 
-const tips = [...document.querySelectorAll("#select_tip")];
+const tips = [...document.querySelectorAll(".select_btn")];
 
 const numberFields = [...document.querySelectorAll("input[type=number]")];
 
