@@ -8,15 +8,9 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Author](#author)
 
 ## Overview
 
@@ -54,7 +48,7 @@ Users should be able to:
 
 - Website - [ikennarichard](https://www.github.com/ikennarichard)
 - Frontend Mentor - [@ikennarichard](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@ikennarichard_](https://www.twitter.com/yourusername)
+- Twitter - [@ikennarichard_](https://www.twitter.com/@ikennarichard_)
 
 
 
