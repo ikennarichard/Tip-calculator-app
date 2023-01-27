@@ -77,6 +77,7 @@ numberFields.forEach((field) => {
             let eachPersonsBill = billAmount() / e.target.valueAsNumber;
            
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
+            console.log(tip_amount)
 
             let total = eachPersonsBill + tip_amount;
 
@@ -142,7 +143,7 @@ document.querySelector(".custom_tip").addEventListener("click", ()=>{
 resetBtn.addEventListener ("click", ()=> {
     
     bill.value = "";
-    tipValue = 0;
+    // tipValue = 0;
     document.querySelector(".no_of_people").value = "";
     document.querySelector(".custom_tip").value = "";
     window.location.reload();
