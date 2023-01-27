@@ -9,6 +9,7 @@ const tipAmount = document.querySelector(".tip_amount > strong");
 
 const totalTip = document.querySelector(".total_tip > strong");
 
+const resetBtn = document.querySelector(".reset");
 
 
 
@@ -49,15 +50,29 @@ tips.forEach((tip) => {
 // 
 numberFields.forEach((field) => {
     field.addEventListener("input", (e) => {
-    
+      
         if (e.target.value == "") {
             e.target.classList.remove("no_error");
             e.target.classList.add("error");
+           
+            
         } else {
             e.target.classList.add("no_error");
+            
         }
 
         if (field['id'] == "no_of_people"){
+            // display error message
+            let erroMessage = document.querySelector(".error_message");
+
+            if(field.value == "") {
+                
+                erroMessage.style.visibility = "visible";
+            } else {
+               erroMessage.style.visibility = "hidden";  
+            }
+
+
             let eachPersonsBill = billAmount() / e.target.valueAsNumber;
            
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
@@ -121,3 +136,13 @@ document.querySelector(".custom_tip").addEventListener("click", ()=>{
         tip.classList.remove("button_color");
     })
   })
+
+
+// reset button
+resetBtn.addEventListener ("click", ()=> {
+    
+    bill.value = "";
+    tipValue = 0;
+    document.querySelector(".no_of_people").value = "";
+    window.location.reload();
+})

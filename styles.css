@@ -181,7 +181,7 @@ input[type=button]:hover {
     word-spacing: 2px;
     position: absolute;
     right: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
     color: var(--soft-red) ;
 }
 
@@ -235,4 +235,10 @@ button {
     font-weight: 700;
     padding: .5em 4em;
     border-radius: .4em;
+    
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(150%);
 }
