@@ -63,6 +63,7 @@ input {
     display: grid;
     place-items: center;
     width: 100%;
+
     gap: 20px;
     padding-block-start: 4em;
     /* border: 5px solid burlywood; */
@@ -73,6 +74,7 @@ main {
     padding-block-start: 2em;
     width: 100%;
     min-width: 228px;
+    
     display: grid;
     place-items: center;
     background-color: var(--white);
@@ -117,7 +119,7 @@ main {
 }
 
 .no_error {
-    outline: 2px solid var(--strong-cyan);
+    outline: 1px solid var(--strong-cyan);
 }
 
 

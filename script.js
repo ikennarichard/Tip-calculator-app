@@ -64,13 +64,13 @@ numberFields.forEach((field) => {
 
         if (field['id'] == "no_of_people"){
             // display error message
-            let erroMessage = document.querySelector(".error_message");
+            let errorMessage = document.querySelector(".error_message");
 
             if(field.value == "") {
                 
-                erroMessage.style.visibility = "visible";
+                errorMessage.style.visibility = "visible";
             } else {
-               erroMessage.style.visibility = "hidden";  
+               errorMessage.style.visibility = "hidden";  
             }
 
 
