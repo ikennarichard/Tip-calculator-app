@@ -35,7 +35,7 @@ tips.forEach((tip) => {
         let eachPersonsBill = billAmount() / noOfPeople;
            
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
-            console.log(tip_amount);
+    
             let total = eachPersonsBill + tip_amount;
 
             if (!tip_amount){
