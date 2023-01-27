@@ -42,7 +42,7 @@ tips.forEach((tip) => {
                 tipAmount.textContent = `$0.00`;
                 totalTip.textContent = `$0.00`;
             } else {
-            tipAmount.textContent = `$${tip_amount.toString().slice(0, 4)}`;
+            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
             totalTip.textContent = `$${total.toFixed(2)}`;
             }
             
@@ -90,7 +90,7 @@ numberFields.forEach((field) => {
                 tipAmount.textContent = `$0.00`;
                 totalTip.textContent = `$0.00`;
             } else {
-            tipAmount.textContent = `$${tip_amount.toString().slice(0, 4)}`;;
+            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;;
             totalTip.textContent = `$${total.toFixed(2)}`;
             }
             
@@ -115,7 +115,7 @@ numberFields.forEach((field) => {
                 tipAmount.textContent = `$0.00`;
                 totalTip.textContent = `$0.00`;
             } else {
-            tipAmount.textContent = `$${tip_amount.toString().slice(0, 4)}`;;
+            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;;
             totalTip.textContent = `$${total.toFixed(2)}`;
             }
         }
