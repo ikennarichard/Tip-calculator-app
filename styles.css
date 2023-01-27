@@ -37,6 +37,7 @@ img {
 body {
     display: grid;
     place-items: center;
+    min-height: 100vh;
     font-family: 'Space Mono', monospace;
     background-color: var(--light-grayish-cyan);
 }
