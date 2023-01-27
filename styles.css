@@ -63,8 +63,10 @@ input {
     display: grid;
     place-items: center;
     width: 100%;
+    
     gap: 20px;
     padding-block-start: 4em;
+    /* border: 5px solid burlywood; */
 }
 
 
@@ -72,6 +74,7 @@ main {
     padding-block-start: 2em;
     width: 100%;
     min-width: 228px;
+    
     display: grid;
     place-items: center;
     background-color: var(--white);
@@ -137,7 +140,7 @@ main {
 
 .tip_percent {
     display: grid;
-    grid-template-columns: repeat(autofill);
+    grid-template-columns: repeat(autofit);
     gap: 10px;
     width: 100%;
 }
@@ -205,6 +208,12 @@ input[type=button]:hover {
     border-radius: 1em;
 }
 
+.view {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 
 .tip, .total {
     display: flex;
@@ -241,4 +250,43 @@ button {
 button:hover {
     cursor: pointer;
     filter: brightness(150%);
+}
+
+
+@media (min-width: 500px) {
+
+    .wrapper {
+        max-width: 620px
+    }
+
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tip_percent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tip_percent > label{
+        grid-column: span 3;
+    }
+
+    .total_tip_section {
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .view {
+        padding-top: 1.5em;
+        gap: 27px;
+    }
+
+    strong {
+        font-size: 3rem;
+    }
+
+    button {
+        margin-block-end: 10px;
+    }
 }

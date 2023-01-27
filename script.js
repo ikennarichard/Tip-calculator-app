@@ -47,7 +47,8 @@ tips.forEach((tip) => {
     }
 )});
 
-// 
+
+
 numberFields.forEach((field) => {
     field.addEventListener("input", (e) => {
       
@@ -130,7 +131,6 @@ function toggleStyle(event) {
 
 
 //remove style when field is clicked
-
 document.querySelector(".custom_tip").addEventListener("click", ()=>{
     tips.forEach(tip => {
         tip.classList.remove("button_color");
