@@ -2,6 +2,8 @@
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+- [app](https://ikennarichard.github.io/Tip-calculator-app/)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -30,7 +32,7 @@ Users should be able to:
 ### Links
 
 - [github](https://github.com/ikennarichard/Tip-calculator-app)
-- [app](https://ikennarichard.github.io/Tip-calculator-app/)
+
 
 
 ## My process
