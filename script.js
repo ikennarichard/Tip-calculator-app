@@ -28,19 +28,21 @@ tips.forEach((tip) => {
         toggleStyle(e);
         document.querySelector(".custom_tip").value = "";
         tipValue = e.target.value.slice(0, -1);
+
+        let noOfPeople = document.querySelector("#no_of_people").valueAsNumber;
         
 
-        let eachPersonsBill = billAmount() / document.querySelector("#no_of_people").valueAsNumber;
+        let eachPersonsBill = billAmount() / noOfPeople;
            
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
-
+            console.log(tip_amount);
             let total = eachPersonsBill + tip_amount;
 
             if (!tip_amount){
                 tipAmount.textContent = `$0.00`;
                 totalTip.textContent = `$0.00`;
             } else {
-            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
+            tipAmount.textContent = `$${tip_amount.toString().slice(0, 4)}`;
             totalTip.textContent = `$${total.toFixed(2)}`;
             }
             
@@ -74,10 +76,13 @@ numberFields.forEach((field) => {
             }
 
 
+            // calculate tip
             let eachPersonsBill = billAmount() / e.target.valueAsNumber;
            
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
-            console.log(tip_amount)
+
+            
+            
 
             let total = eachPersonsBill + tip_amount;
 
@@ -85,7 +90,7 @@ numberFields.forEach((field) => {
                 tipAmount.textContent = `$0.00`;
                 totalTip.textContent = `$0.00`;
             } else {
-            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
+            tipAmount.textContent = `$${tip_amount.toString().slice(0, 4)}`;;
             totalTip.textContent = `$${total.toFixed(2)}`;
             }
             
@@ -95,10 +100,11 @@ numberFields.forEach((field) => {
         if (field['id'] === "custom_tip") {
             
             tipValue = document.querySelector(".custom_tip").valueAsNumber;
-           
+
+            let noOfPeople = document.querySelector("#no_of_people").valueAsNumber
 
           
-            let eachPersonsBill = billAmount() / document.querySelector("#no_of_people").valueAsNumber;
+            let eachPersonsBill = billAmount() / noOfPeople;
     
            
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
@@ -109,7 +115,7 @@ numberFields.forEach((field) => {
                 tipAmount.textContent = `$0.00`;
                 totalTip.textContent = `$0.00`;
             } else {
-            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
+            tipAmount.textContent = `$${tip_amount.toString().slice(0, 4)}`;;
             totalTip.textContent = `$${total.toFixed(2)}`;
             }
         }
@@ -143,7 +149,6 @@ document.querySelector(".custom_tip").addEventListener("click", ()=>{
 resetBtn.addEventListener ("click", ()=> {
     
     bill.value = "";
-    // tipValue = 0;
     document.querySelector(".no_of_people").value = "";
     document.querySelector(".custom_tip").value = "";
     window.location.reload();
