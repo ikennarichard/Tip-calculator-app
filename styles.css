@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 
-/* styles */
+/* styles */ 
 :root {
     --strong-cyan: hsl(172, 67%, 45%);
     --very-dark-cyan: hsl(183, 100%, 15%);
@@ -277,6 +277,7 @@ button:hover {
 
     .total_tip_section {
         overflow: hidden;
+        text-overflow: ellipsis;
         height: 100%;
         justify-content: space-between;
     }
