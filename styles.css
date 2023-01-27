@@ -253,7 +253,7 @@ button:hover {
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 550px) {
 
     .wrapper {
         max-width: 620px
