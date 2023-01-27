@@ -92,7 +92,7 @@ main {
 
 
 
-.no_of_people, .select_tip, .bill {
+.no_of_people, .select_tip, .bill, .custom_tip {
     display: block;
     text-align: right;
     padding-inline-end: 9px;
@@ -148,7 +148,7 @@ main {
 }
 
 
-input[type=button] {
+.select_btn {
     border: none;
     outline: none;
     padding: .4em 2em;
@@ -162,6 +162,12 @@ input[type=button] {
 
 
 input[type=button]:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+
+.button_color {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
@@ -216,7 +222,7 @@ input[type=button]:hover {
 }
 
 strong {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     color: var(--strong-cyan) ;
 }
 

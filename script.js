@@ -1,18 +1,15 @@
-
-const noOfPeople = document.querySelector("#no_of_people");
-
+// dom elements
 const bill = document.querySelector("#bill");
 
 const tips = [...document.querySelectorAll("#select_tip")];
 
 const numberFields = [...document.querySelectorAll("input[type=number]")];
 
-
-
-// tip amount and total view
 const tipAmount = document.querySelector(".tip_amount > strong");
 
 const totalTip = document.querySelector(".total_tip > strong");
+
+
 
 
 
@@ -24,23 +21,32 @@ let tipValue;
 let billAmount = () => bill.valueAsNumber;
 
 // get tip
-tips.map((tip) => {
-
-    if (tip.type === "button") {
+tips.forEach((tip) => {
 
     tip.addEventListener("click", (e) => {
-        tip.style.cssText = "background-color: var(--strong-cyan); color: var(--very-dark-cyan)";
-        document.querySelector(".select_tip").value = "";
+        toggleStyle(e);
+        document.querySelector(".custom_tip").value = "";
         tipValue = e.target.value.slice(0, -1);
+        
+
+        let eachPersonsBill = billAmount() / document.querySelector("#no_of_people").valueAsNumber;
+           
+            let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
+
+            let total = eachPersonsBill + tip_amount;
+
+            if (!tip_amount){
+                tipAmount.textContent = `$0.00`;
+                totalTip.textContent = `$0.00`;
+            } else {
+            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
+            totalTip.textContent = `$${total.toFixed(2)}`;
+            }
+            
     }
-)} else if (tip.type === "number") {
-    tip.addEventListener("input", (e) => {
-        tipValue = e.target.valueAsNumber;
-    })
-}
-});
+)});
 
-
+// 
 numberFields.forEach((field) => {
     field.addEventListener("input", (e) => {
     
@@ -54,30 +60,64 @@ numberFields.forEach((field) => {
         if (field['id'] == "no_of_people"){
             let eachPersonsBill = billAmount() / e.target.valueAsNumber;
            
-
             let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
-            console.log(tip_amount);
 
             let total = eachPersonsBill + tip_amount;
-            console.log(total)
 
+            if (!tip_amount){
+                tipAmount.textContent = `$0.00`;
+                totalTip.textContent = `$0.00`;
+            } else {
+            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
+            totalTip.textContent = `$${total.toFixed(2)}`;
+            }
+            
+            
+        }
 
+        if (field['id'] === "custom_tip") {
+            
+            tipValue = document.querySelector(".custom_tip").valueAsNumber;
+           
 
-            console.log(tip_amount.toFixed(2));
-            console.log(total.toFixed(2));
+          
+            let eachPersonsBill = billAmount() / document.querySelector("#no_of_people").valueAsNumber;
+    
+           
+            let tip_amount = eachPersonsBill * (Number(tipValue) / 100);
 
+            let total = eachPersonsBill + tip_amount;
+
+            if (!tip_amount){
+                tipAmount.textContent = `$0.00`;
+                totalTip.textContent = `$0.00`;
+            } else {
+            tipAmount.textContent = `$${tip_amount.toFixed(2)}`;
+            totalTip.textContent = `$${total.toFixed(2)}`;
+            }
         }
     });
 });
 
 
+//toggle button background
+function toggleStyle(event) {
+
+    tips.forEach((tip) => {
+        if (tip == event.target) {
+            tip.classList.add("button_color");
+            } else {
+                tip.classList.remove("button_color");
+            }
+    });
+    
+};
 
 
-function getTipTotal(e) {
-    let eachPersonsBill = Math.round(billAmount / e.target.value);
+//remove style when field is clicked
 
-    let tip_amount = eachPersonsBill * (tipValue / 100);
-     total = eachPersonsBill + tip_amount;
-
-}
-
+document.querySelector(".custom_tip").addEventListener("click", ()=>{
+    tips.forEach(tip => {
+        tip.classList.remove("button_color");
+    })
+  })
