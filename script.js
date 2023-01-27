@@ -97,11 +97,11 @@ numberFields.forEach((field) => {
             
         }
 
-        if (field['id'] === "custom_tip") {
+        if (field['id'] === "select_tip") {
             
             tipValue = document.querySelector(".custom_tip").valueAsNumber;
 
-            let noOfPeople = document.querySelector("#no_of_people").valueAsNumber
+            let noOfPeople = document.querySelector("#no_of_people").valueAsNumber;
 
           
             let eachPersonsBill = billAmount() / noOfPeople;
