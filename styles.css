@@ -63,7 +63,6 @@ input {
     display: grid;
     place-items: center;
     width: 100%;
-    
     gap: 20px;
     padding-block-start: 4em;
     /* border: 5px solid burlywood; */
@@ -74,7 +73,6 @@ main {
     padding-block-start: 2em;
     width: 100%;
     min-width: 228px;
-    
     display: grid;
     place-items: center;
     background-color: var(--white);
@@ -262,6 +260,7 @@ button:hover {
 
     main {
         grid-template-columns: 1fr 1fr;
+        margin-block-start: 25px;
     }
 
     .tip_percent {

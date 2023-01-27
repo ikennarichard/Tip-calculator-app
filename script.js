@@ -144,5 +144,6 @@ resetBtn.addEventListener ("click", ()=> {
     bill.value = "";
     tipValue = 0;
     document.querySelector(".no_of_people").value = "";
+    document.querySelector(".custom_tip").value = "";
     window.location.reload();
 })
