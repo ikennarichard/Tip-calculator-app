@@ -53,6 +53,7 @@ body {
 
 h1 {
     text-align: center;
+    font-family: --space-bold;
     /* border: 1px solid; */
     word-wrap: break-word;
     width: 3.8em;
@@ -62,7 +63,7 @@ h1 {
 
 
 input {
-    font-family: inherit;
+    font-family: --space-bold;
     width: 100%;
 }
 
@@ -114,7 +115,6 @@ main {
     border-radius: 3px;
     background-color: var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
-    font-weight: 700;
     appearance: textfield;
 }
 
@@ -142,7 +142,7 @@ main {
     height: 12px;
     position: relative;
     top: 34px;
-    right: 15px;
+    right: 25px;
 }
 
 
@@ -206,7 +206,7 @@ input[type=button]:hover {
 .figure_icon {
     position: relative;
     top: 34px;
-    right: 90px;
+    right: 110px;
     height: 12px;
 }
 
@@ -246,7 +246,8 @@ input[type=button]:hover {
 
 strong {
     font-size: 2.5rem;
-    color: var(--strong-cyan) ;
+    color: var(--strong-cyan);
+    font-family: --space-bold;
 }
 
 
